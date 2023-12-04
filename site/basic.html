@@ -1,11 +1,41 @@
+<!-- CHECK TECHCRUNCH (techcrunch.com) FOR EXAMPLE -->
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Hello!!</title>
+<html lang="en">				<!-- BUILDING BLOCK FOR A PAGE-->
+<head>							<!-- ANYTHING CONTAINED IN THIS TAG WILL NOT BE DISPLAYED VISUALLY WITHIN THE CONTENT AREA OF UR BROWSER-->
+	<meta charset="utf-8">		<!--META TAGS COMMUNICATE BOTH WITH THE BROWSER AND THE SEARCH ENGINE TO PROVIDE VALUABLE INFO ABOUT UR PAGE--> <!--VIEWPORT META TAG GIVES THE BROWSER INSTRUCTIONS ON HOW TO CTRL THE PAGES DIMENSIONS IN SCALING-->  <!--SETS THE WIDTH OF THE PAGE TO OFLLOW THE SCREEN WIDTH OF THE DEVICE--><!--SETS INITIAL ZOOM LEVEL WN THE PAGE IS FIRST LOADED BY THE BROWSER-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">	<!-- TO SCALE YOUR WEBPAGE TO MOBILE DEVICES AND WILL PROPORTIONALLY WITH THE DEVICE -->
+	<meta name="description" content="HTML TAGS & DETAILS">		<!-- IF META DESCRIPTION IS NOT PROVIDED, SEARCH ENGINE WILL AUTOMATICALLY GENERATE ONE BASED ON THE CONTENT OF UR PAGE
+	<meta name="keywords" content="HTML, tutorial, beginners">
+	<meta name="author" content="Rushi">
+	<meta http-equiv="refresh" content="30">	<!-- TO AUTOMATICALLY REFRESH AFTER GIVEN AUTO SECONDS -->
+	<!-- <meta http-equiv="Content-Type" content="text/html" -->
+	<meta content="origin" name="referrer">
+	<meta content="/images/branding/googleg/1x/googleg_standard_color_128dp.png" itemprop="image">
+	<title>HTML</title>
+
+	<style type="text/css">
+		Body {
+			color: red;
+		}
+	</style>
+
+	<script type="text/javascript">	
+		function myFunction(){
+			var x = document.getElementById("fname");
+			x.value = x.value.toUpperCase();
+		}
+	</script>
+	<!-- SCRIPT TAG ALLOWS US TO CREATE INTERACTIVE EFFECTS WITHIN THE BROWSER . HEAD TAG CONTAINS JS FUNCTIONS THAT WILL BE CALLED UPON IN THE BODY OF OUR HTML DOCUMENT-->
 </head>
 <body>
-	<h1>Hellloo !!!>
+
+	<h3>CSS:</h3>
+	<ul>
+		<li>
+			STANDS FOR CASCADING STYLE SHEETS. A SET OF RULES THAT DEFINE THE PRESENTATION OF VISUAL ELEMENTS ON AN HTML PAGE
+		</li>
+	</ul>
+
+	Enter your name: <input type="text" id="fname" onchange="myFunction()">
 </body>
 </html>
