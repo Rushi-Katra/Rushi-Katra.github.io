@@ -36,6 +36,8 @@
 		</li>
 	</ul>
 
+	<hr>
+
 	<h3><font color="red"><u>HTML:</u></font></h3>
 	<ul>
 		<li>
@@ -99,16 +101,24 @@
 		</li>
 	</ul>
 
+	<hr>	
+
 	<h3><font color="red"><u>PARAGRAPH SPACING (Gives Double Space between lines) TAG: </u></font> </h3>
 
 	<p>This is line1.</p>
 	<p>This is line2</p>
 
+	<hr>
+
 	<h3><font color="red"><u>LINE BREAK TAG: </u></font></h3>
 	<p>This is Line3. <br> This is Line4.</p>
 
+	<hr>
+
 	<h3><font color="red"><u>SPACING BETWEEN CHARACTER (Spaces created by TAB/Space bar/Enter key are all ignored), NON-BREAKING SPACE: </u></font></h3>
 	<p>This is line5. &nbsp; &nbsp; &nbsp; This is line6.</p>
+
+	<hr>
 
 	<h3><font color="red"><u>UNORDERED LIST: </u></font></h3>
 
@@ -128,6 +138,8 @@
 			<li>Football</li>
 		</ul>
 
+	<hr>
+
 	<h3><font color="red"><u>ORDERED LIST: </u></font></h3>
 
 		<h4><u>My Favorite Vacations:</u></h4>
@@ -145,6 +157,8 @@
 				</ol>
 			<li>Houston, TX</li>
 		</ol>		
+
+	<hr>
 
 	<h3><font color="red"><u>HEADER TAGS: </u></font></h3>
 		<ul>
@@ -174,6 +188,7 @@
 			</li>
 		</ul>
 		
+	<hr>
 
 	<h3><font color="red"><u>CHARACTER STYLING: </u></font></h3>
 
@@ -197,6 +212,8 @@
 			</ul>			
 		</p>
 
+	<hr>
+
 	<h3><font color="red"><u>INLINE TEXT FORMATTING: </u></font></h3>
 		
 		<ul>
@@ -211,6 +228,21 @@
 			</li>
 		</ul>
 
+	<hr>
+
+	<h3><font color="red"><u>HTML ABSOLUTE vs RELATIVE FILE REFERENCING: </u></font></h3>
+
+		<ul>
+			<li>
+				RELATIVE FILE REFERENCING: DOES NOT INCLUDE FULL PATH TO THE IMAGE SOURCE
+			</li>
+			<li>
+				ABSOLUTE FILE REFERENCING: INCLUDES FULL PATH/URL TO THE IMAGE SOURCE
+			</li>
+		</ul>		
+
+	<hr>
+
 	<h3><font color="red"><u>IMAGE INSERTION: </u></font></h3>
 
 		<h4>Vacation Pictures: </h4>
@@ -220,10 +252,11 @@
 		<img src="NY.jpg" width="374" height="250">		<!--RELATIVE FILE REFERENCING-->
 		<img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Houston_night.jpg" width="389" height="250">		<!-- THIS IMAGE IS FROM INTERNET -->  <!--ABSOLUTE FILE REFERENCING-->
 
+	<hr>
 
 	<h3><font color="red"><u>HTML EMBEDDING VIDEOS: </u></font></h3>
 		<video width="600" controls>		<!-- Unit used is PIXELS-->  <!-- Width 100% will take up all the full content area of the browser--> <!-- "controls" ATTRIBUTE WILL LET USER SEE THE CTRLS-->
-			<source src="ya.mp4" type="video/mp4">
+			<source src="ya.mp4" type="video/mp4">		<!-- "src" ATTRIBUTE, REQUIRES WE SPECIFY SOURCE LOCATION AND NAME OF THE FILE TO BE INSERTED IN THE DOCUMENT -->
 			Your browser does not support the video tag
 		</video>
 
@@ -232,9 +265,250 @@
 			Your browser does not support the video tag
 		</video>
 
+	<hr>
 
-	<h3><font color="red"><u>HTML ABSOLUTE vs RELATIVE FILE REFERENCING: </u></font></h3>
+	<h3><font color="red"><u>LINK CREATION: </u></font></h3>
 
-	<br>Enter your name: <input type="text" id="fname" onchange="myFunction()">
+		<h4>ADDING LINKS TO IMAGE: </h4>
+
+		<a href="http://www.miami.com" target="_blank"><img src="FL.jpg" width="333" height="250"></a>  <!-- "target" ATTRIBUTE, OPENS THE LINK IN A TAB INSTEAD OF OPENING IN THE SAME TAB-->
+
+		<h4>ADDING LINKS TO TEXT: </h4>
+
+			<p>
+				<a href="http://www.miami.com" target="_blank">Florida.com</a>
+			</p>
+
+	<hr>
+
+	<h3><font color="red"><u>ANCHOR TAGS: </u></font></h3>	<!-- ALLOW US TO LINK TO A SPECIFIC AREA OF CONTENT ON OUR EXISTING PAGE-->
+
+		<p><h4>Table of Contents: </h4></p>
+
+		<ul>
+			<a href="#article1"><li>Article 1</li></a>		<!-- "#" instructs the browser not to divert the user to a new tab when link is clicked and browser will look for the anchor name in the same page -->
+			<a href="#article2"><li>Article 2</li></a>
+			<a href="#article3"><li>Article 3</li></a>
+		</ul>
+
+		<p><h4><a id="article1">Article 1</a></h4></p>
+		<ul>
+			<li>An unvisited link is underlined and blue.</li>
+			<li>A visited link is underlined and purple.</li>
+			<li>An active link is underlined and red.</li>
+		</ul>
+
+		<p><h4><a id="article2">Article 2</a></h4></p>
+		<ul>
+			<li>If the "<a>" tag has no href attribute, it is only a placeholder for a hyperlink.</li>
+			<li>A linked page is normally displayed in the current browser window, unless you specify another target.</li>
+		</ul>
+
+		<p><h4><a id="article3">Article 3</a></h4></p>
+		<ul>
+			<li>Atribute1: download</li>
+			<li>Atribute2: href</li>
+			<li>Atribute3: hreflang</li>
+			<li>Atribute4: media</li>
+			<li>Atribute5: ping</li>
+			<li>Atribute6: referrerpolicy</li>
+			<li>Atribute7: rel</li>
+			<li>Atribute8: target</li>
+			<li>Atribute9: type</li>
+		</ul>
+
+	<p><hr></p>
+	<p><hr></p>	
+
+	<h3><font color="red"><u>HTML TABLES: </u></font></h3>
+
+		<ul>
+			<li>TABLE CELL:	INTERSECTION OF A ROW AND A COLUMN</li>
+			<li>DATA CAN BE IN THE FORM OF IMAGES/TEXT/VIDEO CONTENT</li>
+			<li>"table" TAG ATTRIBUTES:</li>
+				<ul>
+					<li>"width"  (Can be stated in different ways)(WHEN MENTIONED AS 100% OR 50% THE WIDTH OF TABLE INCREASES/DECREASES AS PER THE BROWSER WINDOW SIZE CHANGES. TO CONFIGURE A FIXED WIDTH THAT DOESN'T CHANGE WITH BROWSER SIZE HAVE TO PROVIDE A FIXED VALUE LIKE "500" PIXEL BASED WIDTH..)</li>
+					<li>"border" -- Can give "1" and increase it for thicker border. Can give zero for no border</li>
+					<li>"bordercolor"</li>
+					<li>"cellspacing"	--	DETERMINES AMOUNT OF SPACE BETWEEN EACH CELL IN UR TABLE</li>
+					<li>"cell padding"	--	DEFINES AMOUNT OF SPACE AROUND CELL CONTENTS</li>
+				</ul>
+			<li>UNIT OF MEASUREMENT FOR "border"/"cellspacing"/"cellpadding" IS PIXEL</li>	
+			<li>"tr" TAG TO DEFINE ROWS</li>
+			<li>"td" TAG TO DEFINE COLUMNS</li>
+		</ul>
+
+		<table width="100%" border="1" bordercolor="blue" cellspacing="2" cellpadding="2">	<!-- Can increase "border" attribute value for thicker border or give value "0" for no border-->
+			<!-- width="100%", table expands and contracts and maintains 100% of the browser window-->
+			<!-- width="50%", table always maintains 50% of browsers content area-->
+			<!-- width="500" (can be any number), fixed width, so it doesn't expand or contract with browser window. Now the unit of measurement is Pixel-->
+			<tr>
+				<td>Sport</td>
+				<td>Response</td>
+			</tr>
+			<tr>
+				<td>Basketball</td>
+				<td>25</td>
+			</tr>
+			<tr>
+				<td>Baseball</td>
+				<td>28</td>
+			</tr>
+		</table>
+
+				<table width="100%" border="1" bordercolor="blue" cellspacing="2" cellpadding="2">	<!-- Can increase "border" attribute value for thicker border or give value "0" for no border-->
+			<tr>
+				<td>Sport</td>
+				<td>Response</td>
+			</tr>
+			<tr>
+				<td>Basketball</td>
+				<td>25</td>
+			</tr>
+			<tr>
+				<td>Baseball</td>
+				<td>28</td>
+			</tr>
+		</table>
+
+
+		<p><hr></p>
+		<p><hr></p>		
+
+		<h3><font color="red"><u>HTML NESTED TABLES: </u></font></h3>
+
+			<ul>
+				<li>NESTED TABLE: A TABLE IS PLACED IN ANOTHER TABLE</li>
+				<li>PARENT TABLE: THE TABLE THAT CONTAINS NESTED TABLE</li>
+			</ul>
+
+			<table width="600" border="1" bordercolor="red" cellspacing="2" cellpadding="2">
+				<tr>
+					<td>
+						<table width="100%" border="1" bordercolor="blue" cellspacing="2" cellpadding="2">
+							<tr>
+								<td>Sport</td>
+								<td>Response</td>
+							</tr>
+							<tr>
+								<td>Basketball</td>
+								<td>25</td>
+							</tr>
+						</table>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td>Basketball</td>
+					<td>25</td>
+				</tr>
+				<tr>
+					<td>Baseball</td>
+					<td>28</td>
+				</tr>
+
+			</table>
+
+
+		<p><hr></p>
+		<p><hr></p>		
+
+		<h3><font color="red"><u>HTML MERGING CELLS: </u></font></h3>		<!-- COMBINE/MERGE 2 COLUMNS TO ONE -->
+		
+			<table width="600" border="1" bordercolor="blue" cellspacing="2" cellpadding="2">
+				<tr>
+					<td colspan="2">My Expenses</td>   <!-- "colspan" ATTRIBUTE DEFINES NUMBER OF COLUMNS A CELL SHOULD SPAN-->
+				</tr>
+				<tr>
+					<td>Month</td>
+					<td>Amount</td>
+				</tr>
+				<tr>
+					<td>January</td>
+					<td>$100</td>
+				</tr>
+			</table>	
+
+
+		<p><hr></p>		
+
+		<h3><font color="red"><u>HTML TEXT WRAPPING: </u></font></h3>		<!-- TO PREVENT TEXT FROM WRAPPING ONTO MULTIPLE LINES IF THERE IS NOT ENOUGH SPACE IN CELL TO ACCOMODATE IN ONE LINE-->
+		
+			<table width="600" border="1" bordercolor="blue" cellspacing="2" cellpadding="2">
+				<tr>
+					<td colspan="2">Wrapping and No-Wrapping</td>
+				</tr>
+				<tr>
+					<td >SJHDGFSJFHLDGHXZGHDSLFGIHKDFGJHDKFGHSJGHDFKGJHSLDKFJHDFNIRUIEARHFKSAJFDOIAGUYERIUGH LCAKSDJCDJCNRCNRCNRFWCNWLIGURCURCURTEJFITYCNE</td>
+					<td nowrap="">FJDFMC;DSMFDKG HGHBGALKJJRDKCJFCJHGRCMLSDXJL,AFCA;IFJMVCGMCGYWCYWCYWMHFXWMFXWEQMJOIFEJCQLIEWRJCOEWIJCOEIJF,JCF,JEIOC,EIOFJEOIFJCOPFCOPECOEJFWFWE</td>
+				</tr>
+			</table>
+
+
+		<p><hr></p>		
+
+		<h3><font color="red"><u>HTML TABLE BACKGROUND IMAGE: </u></font></h3>		
+		
+			<h4>Background Image for Table</h4>
+			<table width="600" border="1" bordercolor="blue" cellspacing="2" cellpadding="2" background="tablebg.jpg">
+				<tr>
+					<td colspan="2">My Expenses</td>   
+				</tr>
+				<tr>
+					<td>Month</td>
+					<td>Amount</td>
+				</tr>
+				<tr>
+					<td>January</td>
+					<td>$100</td>
+				</tr>
+			</table>
+
+			<h4>Background Image for Column</h4>
+			<table width="600" border="1" bordercolor="blue" cellspacing="2" cellpadding="2">
+				<tr>
+					<td background="tablebg.jpg" colspan="2">My Expenses</td>  
+				</tr>
+				<tr>
+					<td>Month</td>
+					<td>Amount</td>
+				</tr>
+				<tr>
+					<td>January</td>
+					<td>$100</td>
+				</tr>
+			</table>	
+
+
+
+		<p><hr></p>
+
+		<h3><font color="red"><u>HTML TABLE CELL ALIGNMENT: </u></font></h3>		
+		
+			<table width="600" border="1" bordercolor="blue" cellspacing="2" cellpadding="2" background="tablebg.jpg">
+				<tr>
+					<td colspan="2">My Expenses</td>   
+				</tr>
+				<tr>
+					<td>Month</td>
+					<td>Amount</td>
+				</tr>
+				<tr>
+					<td>January</td>
+					<td align="right">$100</td>		<!--ALIGNS VALUE TO RIGHT-->
+				</tr>
+				<tr>
+					<td>February</td>
+					<td align="center">$200</td>	<!--ALIGNS VALUE IN THE CENTER-->
+				</tr>
+				<tr>
+					<td>March</td>
+					<td align="left">$250</td>		<!--ALIGNS VALUE TO LEFT-->
+				</tr>
+			</table>
+
+	<p>Enter your name: <input type="text" id="fname" onchange="myFunction()"></p>
 </body>
 </html>
