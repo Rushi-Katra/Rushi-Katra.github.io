@@ -509,6 +509,208 @@
 				</tr>
 			</table>
 
+
+		<p><hr></p>	
+
+
+		<h3><font color="red"><u>HTML FORMS: </u></font></h3>	
+
+			<ul>
+				<li>USED TO GATHER INPUT FROM UR USER</li>
+				<li>FORM DATA CAN BE INPUTTED INTO A DB OR SENT TO AN EMAIL ADDRESS OR SOME OTHER FORM OF DATA PROCESS</li>
+				<li>INPUT FORMS ARE CREATED IN HTML</li>
+				<li>DATA IS SUBMITTED TO A PHP SCRIPT FOR PROCESSING.....PHP SCRIPT VALIDATES THE FORM...VALIDATION CAN BE DONE IN CLIENT SIDE PROGRAMMING LANGUAGES SUCH AS JavaSscript AND ALSO IN SERVER SIDE LANGUAGES SUCH AS PHP....RECOMMENDED TO IMPLEMENT BOTH.....FYI, USERS CAN DISABLE CLIENT SIDE VALIDATION BY ADJUSTING SETTING IN WEB BROWSER  </li>
+				<li>EXAMPLES OF DATA VALIDATION TYPES: EMAIL FORMAT/MIN OR MAX LENGTH/PHONE NUMBER FORMAT</li>
+				<li>HTTP PROTOCOL FACILITATES COMMUNICATION BETWEEN CLIENT(WEB Browser) AND SERVER. TWO TYPES OF DATA TRANSMISSION METHODS BETWEEN CLIENT & SERVER: POST & GET</li>
+				<li>POST vs GET:</li>
+					<ul>
+						<h4>GET: </h4>
+						<li>REQUESTS DATA FROM SPECIFIED SOURCE</li>
+						<li>NAME/VALUE PAIRS ARE SENT IN THE URL STRING. EXAMPLE: send.php?fname=john&lname=smith</li>
+						<li>REQUESTS CAN BE CACHED</li>
+						<li>REMAIN IN BROWSER HISTORY</li>
+						<li>SHOULD ONLY BE USED TO RETRIEVE DATA</li>
+						<li>HAVE LENGTH RESTRICTIONS</li>
+						<li>SHOULD NOT BE USED FOR SENSITIVE DATA</li>
+						<li>CAN BE BOOKMARKED</li>
+					</ul>
+					<ul>
+						<h4>POST: </h4>
+						<li>SUBMITS DATA TO BE PROCESSED TO A SPECIFIED SOURCE</li>
+						<li>SENDS NAME/VALUE PAIRS IN THE HTTP MESSAGE BODY.</li>
+						<li>EXAMPLE:</li>
+							<ul>
+								<li>POST send.php HTTP/1.1</li>
+								<li>Host: youaccel.com</li>
+								<li>fname=john&lname=smith</li>
+							</ul>
+						<li>NO RESTRICTIONS ON DATA LENGTH</li>
+						<li>CANNOT BE BOOKMARKED</li>
+						<li>DO NOT REMAIN IN BROWSER HISTORY</li>
+						<li>REQUESTS ARE NEVER CACHED</li>
+					</ul>
+			</ul>
+
+
+			<h5><u>HTML FORMS TAGS AND ATTRIBUTES WITH BORDER: </u></h5>
+
+				<form name="employment" action="send.php" method="post">
+
+					<table width="600" border="1" bordercolor="blue" cellspacing="2" cellpadding="2">
+					<tr>
+						<td colspan="2">Employment Application</td>   
+					</tr>
+					<tr>
+						<td>First Name</td>
+						<td><input type="text" name="fname" maxlength="50" /></td>
+					</tr>
+					<tr>
+						<td>Last Name</td>
+						<td><input type="text" name="lname" maxlength="50"></td>
+					</tr>
+					<tr>
+						<td>Position</td>
+						<td>
+
+							<select name="position">
+								<option value="AC">Accountant</option>    <!-- "option" TAG REQUIRES "value" ATTRIBUTE, WHICH IDENTIFIES THE VALUE THAT WILL BE ATTACHED TO EACH OPTION. EXAMPLE SELECT "ACCOUNTANT" BUT ONLY 2 LETTERS CAN BE SAVED IN DB, IN THAT CASE THE VALUES THAT GET PASSED ON TO PHP SCRIPT WILL ONLY BE FIRST 2 LETTERS OF EACH OPTION. SO "value" ATTRIBUTE IS SET -->
+								<option value="RE">Receptionist</option>
+								<option value="AD">Administrator</option>	
+								<option value="SU">Supervisor</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>Experience Level</td>
+						<td>
+							<select name="experience level">
+								<option value="EL">Entry Level</option>
+								<option value="SE">Some Experience</option>
+								<option value="VE">Very Experienced</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>Job Type</td>		<!-- FOR CHECKBOX MULTIPLE OPTIONS CAN BE SELECTED BY USED, SO UNIQUE NAME FOR EACH OPTION-->
+						<td>
+							<input type="checkbox" name="ft">Full-Time
+							<input type="checkbox" name="pt">Part-Time
+							<input type="checkbox" name="ct">Contract
+						</td>
+
+					</tr>
+					<tr>
+						<td>Employment Status</td>    <!-- FOR RADIO BUTTON, USER SHOULD BE ABLE TO SELECT ONLY ONE OPTION. THEREFORE, SAME NAME IS GIVEN FOR ALL OPTIONS SO THIS IS CALLED RASIO BUTTON GROUP  -->
+						<td>
+							<input type="radio" name="estatus" value="employed">Employed
+							<input type="radio" name="estatus" value="unemployed">Unemployed
+							<input type="radio" name="estatus" value="student">Student
+						</td>
+					</tr>
+					<tr>
+						<td>Additional Comments</td>
+						<td>
+							<textarea name="comments" cols="45" rows="5"></textarea>   <!-- BEYOND 5 ROWS OF TEXT, SCROLL BARS WILL BE ENABLED-->
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+							<input type="submit" name="submit" value="Submit">
+							<input type="reset" name="reset" value="Reset">
+						</td>
+					</tr>
+					</table>
+
+				</form>
+
+
+			<h5><u>HTML FORMS TAGS AND ATTRIBUTES WITHOUT BORDER: </u></h5>
+			
+				<form>
+					
+					<table width="600" cellspacing="2" cellpadding="2">
+					<tr>
+						<td colspan="2">Employment Application</td>   
+					</tr>
+					<tr>
+						<td>First Name</td>
+						<td><input type="text" name="fname" maxlength="50" /></td>
+					</tr>
+					<tr>
+						<td>Last Name</td>
+						<td><input type="text" name="lname" maxlength="50"></td>
+					</tr>
+					<tr>
+						<td>Position</td>
+						<td>
+
+							<select name="position">
+								<option value="AC">Accountant</option>    <!-- "option" TAG REQUIRES "value" ATTRIBUTE, WHICH IDENTIFIES THE VALUE THAT WILL BE ATTACHED TO EACH OPTION. EXAMPLE SELECT "ACCOUNTANT" BUT ONLY 2 LETTERS CAN BE SAVED IN DB, IN THAT CASE THE VALUES THAT GET PASSED ON TO PHP SCRIPT WILL ONLY BE FIRST 2 LETTERS OF EACH OPTION. SO "value" ATTRIBUTE IS SET -->
+								<option value="RE">Receptionist</option>
+								<option value="AD">Administrator</option>	
+								<option value="SU">Supervisor</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>Experience Level</td>
+						<td>
+							<select name="experience level">
+								<option value="EL">Entry Level</option>
+								<option value="SE">Some Experience</option>
+								<option value="VE">Very Experienced</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>Job Type</td>		<!-- FOR CHECKBOX MULTIPLE OPTIONS CAN BE SELECTED BY USED, SO UNIQUE NAME FOR EACH OPTION-->
+						<td>
+							<input type="checkbox" name="ft">Full-Time
+							<input type="checkbox" name="pt">Part-Time
+							<input type="checkbox" name="ct">Contract
+						</td>
+
+					</tr>
+					<tr>
+						<td>Employment Status</td>    <!-- FOR RADIO BUTTON, USER SHOULD BE ABLE TO SELECT ONLY ONE OPTION. THEREFORE, SAME NAME IS GIVEN FOR ALL OPTIONS SO THIS IS CALLED RASIO BUTTON GROUP  -->
+						<td>
+							<input type="radio" name="estatus" value="employed">Employed
+							<input type="radio" name="estatus" value="unemployed">Unemployed
+							<input type="radio" name="estatus" value="student">Student
+						</td>
+					</tr>
+					<tr>
+						<td>Additional Comments</td>
+						<td>
+							<textarea name="comments" cols="45" rows="5"></textarea>   <!-- BEYOND 5 ROWS OF TEXT, SCROLL BARS WILL BE ENABLED-->
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+							<input type="submit" name="submit" value="Submit">
+							<input type="reset" name="reset" value="Reset">
+						</td>
+					</tr>
+					</table>
+
+				</form>	
+
+		<h3><font color="red"><u>HTML IFRAMES: </u></font></h3>  <!-- IFRAME IS AN HTML DOC EMBEDDED IN ANOTHER HTML DOC. COMMONLY USED TO INSERT CONTENT FROM ANOTHER SOURCE INTO A WEB PAGE -->
+
+			<iframe src="http://www.bing.com" width="100%" height="400">
+				<p>Your browser does not support iframes.</p>	
+			</iframe>
+
+			<iframe src="http://www.amdocs.com" width="100%" height="400">
+				<p>Your browser does not support iframes.</p>	
+			</iframe>
+
+
+
+
+
 	<p>Enter your name: <input type="text" id="fname" onchange="myFunction()"></p>
 </body>
 </html>
